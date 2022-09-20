@@ -47,8 +47,8 @@ class DatabaseClient:
             table_name is None or
             output_col is None or
             database_value is None
-        ):
-            raise Exception("Missing parameters")
+        ):  
+            raise Exception(primary_keys, input_col, table_name, output_col, database_value,"Missing parameters")
         database = self.__connector.get_database(database_value)
         args: Dict = {
             "primary_keys": primary_keys,
